@@ -2,94 +2,149 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원가입 웹페이지</title>
-<style type="text/css">
- *{margin:0px;padding:0px}
- body{font-family:"돋움";color:#333}
- legend, caption{font-size:15pt;font-weight:bold}
- #formcon {width:630px;margin:0 auto}
- #formcon h3{padding:0 0 10px 0;font-weight:bold}
- #formcon p{padding:0 0 20px 0}
- fieldset{border:none}
- #formcon table{width:100%;border-top:2px solid #009999;
- border-bottom:2px solid #009999;border-spacing:0}
- #formcon td{border-bottom:1px solid #333;padding:10px 0 10px 10px}
- #formcon th{border-bottom:1px solid #333;padding:10px 0 10px 10px;background:#d7f0ef;text-align:left}
- .red{color:red}
- #formcon input, textarea, select{border:1px solid #a6d5dd;color:#0000ff;padding:1px}
- #formcon .input_btn{text-align:center}
- #formcon .input_btn input{border:0;vertical-align:middle;margin-top:5px}
-  </style>
+<title>회원가입</title>
 </head>
 <body>
-<form name="customer_form" action="join_view.jsp">
-<div id="formcon">
-<fieldset>
-<legend>[회원가입서]</legend>
-<table>
-	<caption>사용자 폼 입력</caption>
-	<tr>
-		<td colspan="2"><span class="red">*</span>별표는 필수입력사항입니다.</td>
-	</tr>
-	<tr>
-		<th><span class="red">*</span>이름</th>
-		<td><input type="text" name="name" size="20" maxlength="10" placeholder="홍길동" required autofocus></td>
-	</tr>
-	<tr>
-		<th><span class="red">*</span>아이디</th>
-		<td><strong>영문, 숫자 4-10글자 내외</strong><input type="text" name="id" size="20" maxlength="10" placeholder="id1234" required></td>
-	</tr>
-	<tr>
-		<th><span class="red">*</span>비밀번호</th>
-		<td><strong>영문, 숫자 4-10글자 내외</strong><input type="password" name="pw" size="20" maxlength="10" required></td>
-	</tr>
-	<tr>
-		<th><span class="red">*</span>비밀번호확인</th>
-		<td><input type="password" name="pw2" size="20" maxlength="10" required></td>
-	</tr>
-	<tr>
-		<th><span class="red">*</span>이메일</th>
-		<td><input type="text" name="email" size="20" maxlength="50" required></td>
-	</tr>
-	<tr>
-		<th>직업</th>
-		<td>
-		<select name="job">
-			<option title="직업선택">직업선택</option>
-			<option title="웹디자이너">웹디자이너</option>
-			<option title="상담사">상담사</option>
-			<option title="개발자">개발자</option>
-			<option title="학생">학생</option>
-		</select>
-		</td>
-	</tr>
-	<tr>
-		<th>직장(학교명)</th>
-		<td><input type="text" name="work" size="20" maxlength="10"></td>
-	</tr>
-	<tr>
-		<th>직책</th>
-		<td><input type="text" name="inChargeOf" size="20" maxlength="10"></td>
-	</tr>
-	<tr>
-		<th>사무실TEL</th>
-		<td><strong>숫자만 기입</strong><input type="text" name="tel" size="20" maxlength="10"></td>
-	</tr>
-	<tr>
-		<th>핸드폰</th>
-		<td><strong>숫자만 기입</strong><input type="text" name="cell" size="20" maxlength="10"></td>
-	</tr>
-	<tr>
-		<th>하고 싶은 말</th>
-		<td><textarea name="msg" rows="5" cols="40"></textarea></td>
-	</tr>
-</table>
-<p class="input_btn">
-<input type="submit" value="등록">
-<input type="reset" value="취소">
-</p>
-</fieldset>
-</div>
+<form action="signup_form_view3.jsp" method="post" name="form">
+	<table width="940" style="padding: 5px 0 5px 0;">
+		<tr height="2" bgcolor="#FFC8C3">
+			<td colspan="2"></td>
+		</tr>
+		<tr>
+			<th>이름</th>
+			<td><input type="text" name="mbname"></td>
+		</tr>
+		<tr>
+			<th>주민등록번호</th>
+			<td><input type="text" name="jumin_1"> - <input
+				type="password" name="jumin_2"></td>
+		</tr>
+		<tr>
+			<th>아이디</th>
+			<td><input type="text" name="cursor:pointer"> <a
+				href='#' style='cursor: help'> korea</a></td>
+		</tr>
+		<tr>
+			<th>비밀번호</th>
+			<td><input type="password" name="mbpw"> 영문/숫자포함 6자 이상</td>
+		</tr>
+		<tr>
+			<th>비밀번호 확인</th>
+			<td><input type="password" name="mbpw_re"></td>
+		</tr>
+		<tr>
+			<th>비밀번호 힌트/답변</th>
+			<td><select name='pwhint' size='1' class='select'>
+				<option value=''>선택하세요</option>
+				<option value='졸업한 초등학교 이름은?'>졸업한 초등학교 이름은?</option>
+				<option value='제일 친한 친구의 핸드폰 번호는?'>제일 친한 친구의 핸드폰 번호는?</option>
+				<option value='아버지 성함은?'>아버지 성함은?</option>
+				<option value='어머니 성함은?'>어머니 성함은?</option>
+				<option value='어릴적내별명은?'>어릴 적 내 별명은?</option>
+				<option value='가장 아끼는 물건은?'>가장 아끼는 물건은?</option>
+				<option value='좋아하는 동물은?'>좋아하는 동물은?</option>
+				<option value='좋아하는 색깔은?'>좋아하는 색깔은?</option>
+				<option value='좋아하는 음식은?'>좋아하는 음식은?</option>
+			</select>
+		</tr>
+		<tr>
+			<th>답변</th>
+			<td><input type='text' name='pwhintans'></td>
+		</tr>
+		<tr>
+			<th>이메일</th>
+			<td><input type='text' name="email">@ <input
+				type='text' name="email_dns"> <select name="emailaddr">
+				<option value="">직접입력</option>
+				<option value="daum.net">daum.net</option>
+				<option value="empal.com">empal.com</option>
+				<option value="gmail.com">gmail.com</option>
+				<option value="hanmail.net">hanmail.net</option>
+				<option value="msn.com">msn.com</option>
+				<option value="naver.com">naver.com</option>
+				<option value="nate.com">nate.com</option>
+			</select></td>
+		</tr>
+		<tr>
+			<th>주소</th>
+			<td><input type="text" name="zip_h_1"> - <input
+				type="text" name="zip_h_2"> <input type="text"
+				name="addr_h1"><br> <input type="text" name="addr_h2">
+			</td>
+		</tr>
+		<tr>
+			<th>전화번호</th>
+			<td><input type="text" name="cel1"> - <input
+				type="text" name="cel2_1" title="전화번호"> - <input
+				type="text" name="cel2_2"></td>
+		</tr>
+		<tr>
+			<th>핸드폰 번호</th>
+			<td><input type="text" name="tel_h1"> - <input
+				type="text" name="tel_h2_1"> - <input type="text"
+				name="tel_h2_2"></td>
+		</tr>
+		<tr>
+			<th>직업</th>
+			<td><select name='job' size='1'>
+				<option value=''>선택하세요</option>
+				<option value='학생'>학생</option>
+				<option value='컴퓨터/인터넷'>컴퓨터/인터넷</option>
+				<option value='언론'>언론</option>
+				<option value='공무원'>공무원</option>
+				<option value='군인'>군인</option>
+				<option value='서비스업'>서비스업</option>
+				<option value='교육'>교육</option>
+				<option value='금융/증권/보험업'>금융/증권/보험업</option>
+				<option value='유통업'>유통업</option>
+				<option value='예술'>예술</option>
+				<option value='의료'>의료</option>
+			</select></td>
+		</tr>
+		<tr>
+			<th>메일/sns 정보 수신</th>
+			<td class="s"><input type="radio" name="chk_mail" value="Y" checked>수신
+				<input type="radio" name="chk_mail" value="N">수신거부</td>
+		</tr>
+		<tr>
+			<th>관심분야</th>
+			<td><input type='checkbox' name='interest' value='17'>생두 
+			<input type='checkbox' name='interest' value='18'>원두 
+			<input type='checkbox' name='interest' value='19'>로스팅 
+			<input type='checkbox' name='interest' value='20'>핸드드립 
+			<input type='checkbox' name='interest' value='21'>에스프레소 
+			<input type='checkbox' name='interest' value='22'>창업</td>
+		</tr>
+		<tr>
+			<th>가입경로</th>
+			<td><select name='location' size='1'>
+				<option value=''>선택하세요</option>
+				<option value='네이버검색'>네이버검색</option>
+				<option value='다음검색'>다음검색</option>
+				<option value='기타검색엔진'>기타검색엔진</option>
+				<option value='카페or동호회를 통해'>카페or동호회를 통해</option>
+				<option value='지인의소개'>지인의소개</option>
+				<option value='기타'>기타</option>
+			</select></td>
+		</tr>
+		<tr>
+			<th>정보공개여부</th>
+			<td><select name='chk_open' size='0'>
+				<option value=''>선택하세요</option>
+				<option value='모두공개'>모두공개</option>
+				<option value='비공개'>비공개</option>
+				<option value='이름공개'>이름공개</option>
+				</select></td>
+		</tr>
+		<tr height="2" bgcolor="#FFC8C3">
+			<td colspan="2"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+			<input type="submit" value="회원가입">
+			<input type="reset" value="취소"></td>
+		</tr>
+	</table>
 </form>
 </body>
 </html>
