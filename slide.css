@@ -1,0 +1,101 @@
+@charset "UTF-8";
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+img {vertical-align: middle;}
+.mySlides {display: none;}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+ from {
+  opacity: .4
+ }
+ to {
+  opacity: 1
+ }
+}
+
+@keyframes fade{
+ from {
+  opacity: .4
+ }
+ to {
+  opacity: 1
+ }
+}
+
+@media only screen and (max-width:300px){
+ .prev .next, .text{
+  font-size: 11px;
+ }
+}
+
+.dot {
+ cursor: pointer;
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ border-radius: 50%;
+ display: inline-block;
+ transition: background-color 0.6s ease;
+ background-color: #bbb;
+}
+
+.prev, .next{
+ cursor: pointer;
+ position: absolute;
+ top: 50%;
+ width: auto;
+ padding: 16px; /* background 범위를 만들어주는 패딩 */
+ margin-top: -22px;
+ color: white;
+ font-weight: bold;
+ font-size: 18px;
+ transition: 0.6s ease;
+ border-radius: 0 3px 3px 0;
+ user-select: none;
+}
+
+.next {
+ right: 0;
+ border-radius: 3px 0 0 3px;
+}
+
+.active, .dot:hover{
+/*  dot의 색상은 background-color */
+ background-color: #ff5025; /* dot의 색상 active일 때 및 hover일때 */
+}
+
+.prev:hover, .next:hover{
+ background-color: rgba(0, 0, 0, 0.8);
+ /* prev나 next위에 마우스가 있을 때 배경(prev,next의 padding) 색상 */
+}
+
+.slideshow-container{
+ max-width: 1200px; /* slideshow-container의 최대너비 속성을 1200px로 변경 */
+ position: relative;
+ margin: auto;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
