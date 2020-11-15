@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<% request.setCharacterEncoding("utf-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,7 +63,7 @@ th, td {
 		<td colspan="2" style="text-align:center">
 			<p>입력한 정보가 정확한가요?</p>
 			<button name="submit" type="button" onclick = "location.href = 'welcome.html'">예</button>
-			<button name="reset" type="button" onclick = "location.href = 'join.jsp'">아니오</button>
+			<button name="reset" type="button" onclick = "location.href = 'join.html'">아니오</button>
 			</td>
 		</tr>
 </table>
